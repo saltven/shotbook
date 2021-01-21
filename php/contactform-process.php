@@ -44,7 +44,7 @@ $responseKeys = json_decode($response,true);
 }*/
 
 
-$EmailTo = "info@shotbook.app";
+$EmailTo = "ammarhazrinn@gmail.com";
 $Subject = "You've got mail! A new interested user for Shotbook from the website";
 
 // prepare email body text
