@@ -2,8 +2,7 @@
 
 (function($) {
     "use strict"; 
-	
-	/* Preloader */
+	//preloader
 	$(window).on('load', function() {
 		var preloaderFadeOutTime = 500;
 		function hidePreloader() {
@@ -16,7 +15,6 @@
 	});
 
 	
-	/* Navbar Scripts */
 	// jQuery to collapse the navbar on scroll
     $(window).on('scroll load', function() {
 		if ($(".navbar").offset().top > 60) {
@@ -44,7 +42,6 @@
     });
 
 
-    /* Image Slider - Swiper */
     var imageSlider = new Swiper('.image-slider', {
         autoplay: {
             delay: 2000,
@@ -79,7 +76,6 @@
     });
 
 
-    /* Card Slider - Swiper */
 	var cardSlider = new Swiper('.card-slider', {
 		autoplay: {
             delay: 4000,
@@ -93,7 +89,6 @@
     });
     
 
-    /* Video Lightbox - Magnific Popup */
     $('.popup-youtube, .popup-vimeo').magnificPopup({
         disableOn: 700,
         type: 'iframe',
@@ -126,7 +121,6 @@
     });
 
 
-    /* Lightbox - Magnific Popup */
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
 		fixedContentPos: false, /* keep it false to avoid html tag shift with margin-right: 17px */
@@ -140,7 +134,7 @@
 	});
     
     
-    /* Move Form Fields Label When User Types */
+    // move form fields label when user types
     // for input and textarea fields
     $("input, textarea").keyup(function(){
 		if ($(this).val() != '') {
@@ -151,7 +145,6 @@
     });
 
 
-    /* Request Form */
     $("#requestForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
             // handle the invalid form...
@@ -209,7 +202,6 @@
     }
     
 
-    /* Contact Form */
     $("#contactForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
             // handle the invalid form...
@@ -269,7 +261,6 @@ var updates = $("#cupdates").val();
     }
 
 
-    /* Privacy Form */
     $("#privacyForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
             // handle the invalid form...
@@ -326,7 +317,7 @@ var updates = $("#cupdates").val();
     }
     
 
-    /* Back To Top Button */
+    // back to top button
     // create the back to top button
     $('body').prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');
     var amountScrolled = 700;
@@ -338,8 +329,8 @@ var updates = $("#cupdates").val();
         }
     });
 
-
-	/* Removes Long Focus On Buttons */
+ 
+	// removes long focus on buttons
 	$(".button, a, button").mouseup(function() {
 		$(this).blur();
 	});
